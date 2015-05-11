@@ -1,3 +1,4 @@
+=======================================================
 Cosmological parameter estimation with the MCMC Hammer
 =======================================================
 
@@ -21,9 +22,9 @@ It gives the user the possibility to plug in modules for the computation of any 
 
 We published a `paper <http://arxiv.org/abs/1212.1721>`_ in the `Astronomy and Computing Journal <http://authors.elsevier.com/sd/article/S221313371300022X>`_ which discusses the advantages and performance of our framework.
 
-This project has been realized in collaboration with the `Institute of 4D Technologies <http://www.fhnw.ch/engineering/i4ds/homepage?set_language=en>`_ of the `University of Applied Sciences and Arts Northwest Switzerland <http://www.fhnw.ch/homepage?set_language=en>`_ (Fachhochschule Nordwestschweiz - FHNW).
+This project has been realized in collaboration with the `Institute of 4D Technologies <http://www.fhnw.ch/engineering/i4ds/homepage>`_ of the `University of Applied Sciences and Arts Northwest Switzerland <http://www.fhnw.ch/homepage>`_ (Fachhochschule Nordwestschweiz - FHNW).
 
 The development is coordinated on `GitHub <http://github.com/cosmo-ethz/CosmoHammer>`_ and contributions are welcome. The documentation of **CosmoHammer** is available at `readthedocs.org <http://cosmohammer.readthedocs.org/>`_ and the package is distributed over `PyPI <https://pypi.python.org/pypi/CosmoHammer>`_.
 
-For all public modules such as PyCamb, WMAP3-9, Planck and more, see the cosmoHammerPlugins project on `GitHub <https://github.com/cosmo-ethz/CosmoHammerPlugins>`_.
+For all public modules such as PyCamb, WMAP, Planck and more, see the cosmoHammerPlugins project at http://github.com/cosmo-ethz/CosmoHammerPlugins.
 
