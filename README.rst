@@ -25,5 +25,5 @@ This project has been realized in collaboration with the `Institute of 4D Techno
 
 The development is coordinated on `GitHub <http://github.com/cosmo-ethz/CosmoHammer>`_ and contributions are welcome. The documentation of **CosmoHammer** is available at `readthedocs.org <http://cosmohammer.readthedocs.org/>`_ and the package is distributed over `PyPI <https://pypi.python.org/pypi/CosmoHammer>`_.
 
-For all public modules such as PyCamb, WMAP3-9, Planck and more, see the cosmoHammerPlugins project `GitHub <https://github.com/cosmo-ethz/CosmoHammerPlugins>`_
+For all public modules such as PyCamb, WMAP3-9, Planck and more, see the cosmoHammerPlugins project on `GitHub <https://github.com/cosmo-ethz/CosmoHammerPlugins>`_.
 

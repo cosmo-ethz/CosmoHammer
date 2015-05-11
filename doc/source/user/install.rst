@@ -33,4 +33,4 @@ Cosmological parameters from CMB data
 ------------------------------------------------------------------------
 
 To estimate cosmological parameters you will need likelihood and core modules for CosmoHammer.
-See the cosmoHammerPlugins project at ... for the modules publicly available at the moment.
+See the cosmoHammerPlugins project `GitHub <https://github.com/cosmo-ethz/CosmoHammerPlugins>`_ for the modules publicly available at the moment.
