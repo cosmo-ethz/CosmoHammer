@@ -1,8 +1,21 @@
 Cosmological parameter estimation with the MCMC Hammer
 =======================================================
 
+.. image:: https://badge.fury.io/py/cosmoHammer.png
+    :target: http://badge.fury.io/py/cosmoHammer
+
+.. image:: https://travis-ci.org/cosmo-ethz/CosmoHammer.png?branch=master
+        :target: https://travis-ci.org/cosmo-ethz/CosmoHammer
+        
+.. image:: https://pypip.in/d/cosmoHammer/badge.png
+        :target: https://crate.io/packages/cosmoHammer?version=latest
+
+.. image:: https://coveralls.io/repos/cosmo-ethz/cosmoHammer/badge.png?branch=master
+        :target: https://coveralls.io/r/cosmo-ethz/cosmoHammer?branch=master
+
 .. image:: http://img.shields.io/badge/arXiv-1212.1721-orange.svg?style=flat
         :target: http://arxiv.org/abs/1212.1721
+
 
 
 CosmoHammer is a framework which embeds `emcee <http://arxiv.org/abs/1202.3665>`_ , an implementation by Foreman-Mackey et al. (2012) of the `Affine Invariant Markov chain Monte Carlo (MCMC) Ensemble sampler <http://msp.berkeley.edu/camcos/2010/5-1/p04.xhtml>`_ by Goodman and Weare (2010).
