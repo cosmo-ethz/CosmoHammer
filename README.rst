@@ -7,11 +7,8 @@ Cosmological parameter estimation with the MCMC Hammer
 .. image:: https://travis-ci.org/cosmo-ethz/CosmoHammer.png?branch=master
         :target: https://travis-ci.org/cosmo-ethz/CosmoHammer
         
-.. image:: https://pypip.in/d/cosmoHammer/badge.png
-        :target: https://crate.io/packages/cosmoHammer?version=latest
-
-.. image:: https://coveralls.io/repos/cosmo-ethz/cosmoHammer/badge.png?branch=master
-        :target: https://coveralls.io/r/cosmo-ethz/cosmoHammer?branch=master
+.. image:: https://coveralls.io/repos/cosmo-ethz/CosmoHammer/badge.svg
+  		:target: https://coveralls.io/r/cosmo-ethz/CosmoHammer
 
 .. image:: http://img.shields.io/badge/arXiv-1212.1721-orange.svg?style=flat
         :target: http://arxiv.org/abs/1212.1721
