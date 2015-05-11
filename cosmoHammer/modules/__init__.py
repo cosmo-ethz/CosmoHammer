@@ -1,0 +1,3 @@
+from cosmoHammer.modules.RosenbrockModule import RosenbrockModule
+from cosmoHammer.modules.MultivarianteGaussianModule import MultivarianteGaussianModule
+from cosmoHammer.modules.PseudoCmbModule import PseudoCmbModule

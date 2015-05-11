@@ -1,0 +1,13 @@
+include AUTHORS.rst 
+include HISTORY.rst 
+include README.rst 
+include LICENSE 
+include doc/*
+include doc/source/*
+include doc/source/user/*
+include Tests/*
+include examples/*.py
+include Makefile
+
+exclude .settings/* 
+exclude .pydevproject
