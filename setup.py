@@ -37,7 +37,7 @@ setup(
     version='0.5.0',
     author='Joel Akeret',
     author_email="jakeret@phys.ethz.ch",
-    url="http://www.astro.ethz.ch/refregier/research/Software/cosmohammer",
+    url="http://www.cosmology.ethz.ch/research/software-lab/cosmohammer.html",
     license="GPLv3",
     packages=find_packages(PACKAGE_PATH, "Tests"),
     description="Cosmological parameter estimation with the MCMC Hammer",
