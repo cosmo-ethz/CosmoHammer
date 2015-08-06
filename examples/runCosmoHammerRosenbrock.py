@@ -8,16 +8,14 @@ from cosmoHammer import CosmoHammerSampler
 from cosmoHammer import LikelihoodComputationChain
 from cosmoHammer.modules import RosenbrockModule
 
-import numpy as np
+from cosmoHammer.util import Params
 
 
 #parameter start center, min, max, start width
-params = [[1, -10, 10, 0.1],
-                [1, -10, 10, 0.1]]
+params = Params(("x", [1, -10, 10, 0.1]),
+                ("y", [1, -10, 10, 0.1]))
 
 
-
-params = np.array(params)
 
 chain = LikelihoodComputationChain()
 
@@ -30,7 +28,7 @@ chain.setup()
 sampler = CosmoHammerSampler(
                 params= params, 
                 likelihoodComputationChain=chain, 
-                filePrefix="temp/rosenbrock", 
+                filePrefix="rosenbrock", 
                 walkersRatio=50, 
                 burninIterations=100, 
                 sampleIterations=100)

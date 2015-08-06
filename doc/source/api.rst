@@ -66,6 +66,9 @@ CosmoHammer Exceptions
 CosmoHammer Utils
 -------------------------------------
 
+.. autoclass:: cosmoHammer.util.Params
+   :members: 
+
 .. autoclass:: cosmoHammer.util.SampleBallPositionGenerator
    :members: 
 

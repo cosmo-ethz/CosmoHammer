@@ -40,7 +40,7 @@ chain.setup()
 sampler = CosmoHammerSampler(
                 params= params, 
                 likelihoodComputationChain=chain, 
-                filePrefix="temp/multivariantGausian", 
+                filePrefix="multivariantGausian", 
                 walkersRatio=50, 
                 burninIterations=0, 
                 sampleIterations=100,

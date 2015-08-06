@@ -6,8 +6,9 @@ Execute with py.test -v
 
 """
 
-import numpy
+import numpy as np
 from cosmoHammer import LikelihoodComputationChain
+from cosmoHammer.util import Params
 
 class TestLikelihoodComputationChain(object):
 
@@ -17,8 +18,8 @@ class TestLikelihoodComputationChain(object):
         assert len(chain.getCoreModules())==0
         assert len(chain.getLikelihoodModules())==0
         
-        coreModule = DummyMoudle()
-        likeModule = DummyMoudle()
+        coreModule = DummyModule()
+        likeModule = DummyModule()
         chain.addCoreModule(coreModule)
         chain.addLikelihoodModule(likeModule)
         assert len(chain.getCoreModules())==1
@@ -33,9 +34,9 @@ class TestLikelihoodComputationChain(object):
         assert coreModule.called
         assert likeModule.compLike
         
-        assert like == DummyMoudle.like
+        assert like == DummyModule.like
         assert len(data) == 1
-        assert data["data"] == DummyMoudle.data
+        assert data["data"] == DummyModule.data
         
     def test_isValid(self):
         chain = LikelihoodComputationChain()
@@ -78,17 +79,49 @@ class TestLikelihoodComputationChain(object):
         assert not chain.isValid([2, 3])
         
         like, data = chain([-1, 0])
-        assert like == -numpy.inf
+        assert like == -np.inf
         assert len(data) == 0
         
         like, data = chain([2, 3])
-        assert like == -numpy.inf
+        assert like == -np.inf
         assert len(data) == 0
         
+    def test_createChainContext(self):
+        chain = LikelihoodComputationChain()
         
+        p = np.array([1,2])
+        ctx = chain.createChainContext(p)
+        assert ctx is not None
+        assert np.all(ctx.getParams() == p)
+
+    def test_createChainContext_params_invalid(self):
+        chain = LikelihoodComputationChain()
+        chain.values = []
         
+        p = np.array([1,2])
+        ctx = chain.createChainContext(p)
         
-class DummyMoudle(object):
+        assert ctx is not None
+        assert np.all(ctx.getParams() == p)
+        
+    def test_createChainContext_params(self):
+        keys = ["a", "b"]
+        params = Params((keys[0], 0),
+                        (keys[1], 1))
+        chain = LikelihoodComputationChain()
+        chain.params = params
+        
+        p = np.array([1,2])
+        ctx = chain.createChainContext(p)
+        
+        assert ctx is not None
+        assert np.all(ctx.getParams().keys == keys) 
+        assert np.all(ctx.getParams()[0] == p[0]) 
+        assert np.all(ctx.getParams()[1] == p[1]) 
+        
+
+        
+class DummyModule(object):
     
     like = 0
     data = 1
