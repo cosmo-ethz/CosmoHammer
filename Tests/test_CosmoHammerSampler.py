@@ -74,7 +74,7 @@ class TestCosmoHammerSampler(object):
     def test_init(self):
         self.sampler = CosmoHammerSampler(
                 params= self.params, 
-                likelihoodComputationChain=None, 
+                likelihoodComputationChain=LikelihoodComputationChain(), 
                 filePrefix=self._getTempFilePrefix(), 
                 walkersRatio=10, 
                 burninIterations=1, 
@@ -83,6 +83,7 @@ class TestCosmoHammerSampler(object):
         assert isinstance(self.sampler.storageUtil, SampleFileUtil) 
         assert isinstance(self.sampler.stopCriteriaStrategy, IterationStopCriteriaStrategy)
         assert isinstance(self.sampler.initPositionGenerator, SampleBallPositionGenerator)
+        assert self.sampler.likelihoodComputationChain.params is not None
 
     
     def test_no_burn_in(self):

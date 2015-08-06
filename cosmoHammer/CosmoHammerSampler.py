@@ -43,9 +43,7 @@ class CosmoHammerSampler(object):
         CosmoHammer sampler implementation
 
         """
-
-        self.paramValues = params[:,0]
-        self.paramWidths = params[:,3]
+        self.params = params
         self.likelihoodComputationChain = likelihoodComputationChain
         self.walkersRatio = walkersRatio
         self.reuseBurnin = reuseBurnin
@@ -56,8 +54,11 @@ class CosmoHammerSampler(object):
         self.burninIterations = burninIterations
         self.sampleIterations = sampleIterations
         
-        
+        assert likelihoodComputationChain is not None, "The sampler needs a chain"
         assert sampleIterations > 0, "CosmoHammer needs to sample for at least one iterations"
+        
+        if not hasattr(self.likelihoodComputationChain, "params"):
+            self.likelihoodComputationChain.params = params
         
         # setting up the logging
         self._configureLogging(filePrefix+c.LOG_FILE_SUFFIX, logLevel)
@@ -124,6 +125,14 @@ class CosmoHammerSampler(object):
         Returns a new instance of a Init Position Generator
         """
         return SampleBallPositionGenerator()
+    
+    @property
+    def paramValues(self):
+        return self.params[:,0]
+    
+    @property
+    def paramWidths(self):
+        return self.params[:,3]
     
     def startSampling(self):
         """
@@ -282,7 +291,6 @@ class CosmoHammerSampler(object):
         Factory method to create initial positions
         """
         return self.initPositionGenerator.generate()
-        #return emcee.utils.sample_ball(self.paramValues, self.paramWidths, self.nwalkers)
 
 
     def getChain(self):

@@ -3,3 +3,4 @@ from cosmoHammer.util.SampleFileUtil import SampleFileUtil
 from cosmoHammer.util.InMemoryStorageUtil import InMemoryStorageUtil
 from cosmoHammer.util.SampleBallPositionGenerator import SampleBallPositionGenerator
 from cosmoHammer.util.FlatPositionGenerator import FlatPositionGenerator
+from cosmoHammer.util.Params import Params
