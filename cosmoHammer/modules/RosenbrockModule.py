@@ -12,7 +12,7 @@ class RosenbrockModule(object):
 
     def computeLikelihood(self, ctx):
         p = ctx.getParams()
-        return -(self.a1 * (p[1]-p[0]**2)**2 + (1-p[0])**2)/self.a2
+        return -(self.a1 * (p.y - p.x**2)**2 + (1 - p.x)**2) / self.a2
     
     def setup(self):
         getLogger().info("Rosenbrock setup")
