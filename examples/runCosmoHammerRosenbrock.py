@@ -10,7 +10,6 @@ from cosmoHammer.modules import RosenbrockModule
 
 from cosmoHammer.util import Params
 
-
 #parameter start center, min, max, start width
 params = Params(("x", [1, -10, 10, 0.1]),
                 ("y", [1, -10, 10, 0.1]))
@@ -33,3 +32,14 @@ sampler = CosmoHammerSampler(
                 burninIterations=100, 
                 sampleIterations=100)
 sampler.startSampling()
+
+try:
+    import numpy as np
+    import matplotlib.pyplot as plt
+    data = np.loadtxt("rosenbrock.out")
+    plt.scatter(data[:,0], data[:, 1], 1)
+    plt.xlabel(params.keys[0])
+    plt.ylabel(params.keys[1])
+    plt.show()
+except Exception:
+    print("Plotting failed. Missing libs?")
