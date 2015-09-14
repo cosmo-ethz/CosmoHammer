@@ -87,11 +87,8 @@ class CosmoHammerSampler(object):
     
     
     def _configureLogging(self, filename, logLevel):
-        # create logger with 'spam_application'
         logger = getLogger()
         logger.setLevel(logLevel)
-        # create file handler which logs even debug messages
-#         fh = ConcurrentRotatingFileHandler(filename, "w", 512*1024, 5, supress_abs_warn=True)
         fh = logging.FileHandler(filename, "w")
         fh.setLevel(logLevel)
         # create console handler with a higher log level
@@ -102,6 +99,8 @@ class CosmoHammerSampler(object):
         fh.setFormatter(formatter)
         ch.setFormatter(formatter)
         # add the handlers to the logger
+        for handler in logger.handlers[:]:
+            logger.removeHandler(handler)
         logger.addHandler(fh)
         logger.addHandler(ch)
 #         logging.basicConfig(format='%(asctime)s %(levelname)s:%(message)s', 
