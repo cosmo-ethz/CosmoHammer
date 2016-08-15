@@ -7,7 +7,6 @@ from __future__ import print_function, division, absolute_import, unicode_litera
 
 import numpy
 from cosmoHammer.pso.ParticleSwarmOptimizer import ParticleSwarmOptimizer
-from cosmoHammer.pso.ParaboloidFitter import ParaboloidFitter
 from cosmoHammer.pso.CurvatureFitter import CurvatureFitter
 
 class BestFitPositionGenerator(object):

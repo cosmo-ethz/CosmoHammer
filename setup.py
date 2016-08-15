@@ -34,7 +34,7 @@ PACKAGE_PATH = os.path.abspath(os.path.join(__file__, os.pardir))
 
 setup(
     name="cosmoHammer",
-    version='0.5.0',
+    version='0.6.0',
     author='Joel Akeret',
     author_email="jakeret@phys.ethz.ch",
     url="http://www.cosmology.ethz.ch/research/software-lab/cosmohammer.html",
@@ -60,6 +60,6 @@ setup(
         'Natural Language :: English',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
     ],
 )
