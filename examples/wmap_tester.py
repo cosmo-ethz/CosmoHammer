@@ -16,7 +16,7 @@ from cosmoHammer.ChainContext import ChainContext
 
 
 pyCambCore = PyCambCoreModule.PyCambCoreModule()
-cambCore = CambCoreModule.CambCoreModule()
+cambCore = CambCoreModule()
 wmap3Likelihood = wmap3.WmapLikelihoodModule()
 wmap5Likelihood = wmap5.WmapLikelihoodModule()
 wmap7Likelihood = wmap7.WmapLikelihoodModule()

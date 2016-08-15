@@ -11,8 +11,8 @@ standard ``SampleFileUtilSampleFileUtil`` in order to save additional parameters
 '''
 from cosmoHammer.util import SampleFileUtil
 
-VALUE_1_KEY = "value1"
-VALUE_2_KEY = "value2"
+VALUE_1_KEY = "derived_params_key"
+VALUE_2_KEY = "derived_params_key"
 
 OUTPUT_ORDER = [VALUE_2_KEY, VALUE_1_KEY]
 
@@ -35,7 +35,8 @@ class DerivedParamterFileUtil(SampleFileUtil):
         
         #handle special parameters
         for derParams in data:
-            self.paramsFile.write("\t".join(derParams[key] for key in OUTPUT_ORDER))
+            if len(derParams) > 0:
+                self.paramsFile.write("\t".join([str(derParams[key]) for key in OUTPUT_ORDER]))
             self.paramsFile.write("\n")
                                   
         self.paramsFile.flush();
