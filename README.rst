@@ -11,6 +11,10 @@ Cosmological parameter estimation with the MCMC Hammer
 .. image:: https://coveralls.io/repos/cosmo-ethz/CosmoHammer/badge.svg
   		:target: https://coveralls.io/r/cosmo-ethz/CosmoHammer
 
+.. image:: https://readthedocs.org/projects/cosmohammer/badge/?version=latest
+		:target: http://cosmohammer.readthedocs.io/en/latest/?badge=latest
+		:alt: Documentation Status
+
 .. image:: http://img.shields.io/badge/arXiv-1212.1721-orange.svg?style=flat
         :target: http://arxiv.org/abs/1212.1721
 
