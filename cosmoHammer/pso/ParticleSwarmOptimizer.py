@@ -170,7 +170,7 @@ class ParticleSwarmOptimizer(object):
         
     def _convergedFit(self, it, p, m):
         bestSort = numpy.sort([particle.pbest.fitness for particle in self.swarm])[::-1]
-        meanFit = numpy.mean(bestSort[1:math.floor(self.particleCount*p)])
+        meanFit = numpy.mean(bestSort[1:int(math.floor(self.particleCount*p))])
 #        print( "best %f, meanFit %f, ration %f"%( self.gbest[0], meanFit, abs((self.gbest[0]-meanFit))))
         return (abs(self.gbest.fitness-meanFit)<m)
     

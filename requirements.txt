@@ -1,4 +1,4 @@
 emcee
 numpy
-mock>=1.0.1
-pytest>=2.6.3
+mock
+pytest
