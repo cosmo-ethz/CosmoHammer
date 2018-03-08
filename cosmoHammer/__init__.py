@@ -6,7 +6,7 @@ import logging
 This is the CosmoHammer package.
 """
 
-__version__   = '0.6.0'
+__version__   = '0.6.1'
 __author__    = 'Joel Akeret'
 __credits__   = 'Institute for Astronomy ETHZ, Institute of 4D Technologies FHNW'
 

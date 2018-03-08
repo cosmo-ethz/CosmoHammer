@@ -3,12 +3,15 @@
 History
 -------
 
+0.6.1 (2018-03-05)
+++++++++++++++++++
+- Fixed numpy compatibility issue
+
 0.6.0 (2016-08-15)
 ++++++++++++++++++
 - Order preserving parameter objects
 - Fixing logging issue
 - Prettified examples
-
 
 0.5.0 (2015-05-12)
 ++++++++++++++++++
